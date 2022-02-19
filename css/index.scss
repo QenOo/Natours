@@ -2,6 +2,7 @@
 @import "scss/base";
 @import "scss/animations";
 @import "scss/utilities";
+@import "scss/button";
 
 
 /* Header Styles */
@@ -60,57 +61,6 @@
         }
     }
 
-    .btn {
-
-        &:link,
-        &:visited {
-            text-decoration: none;
-            padding: 1.5rem 4rem;
-            display: inline-block;
-            border-radius: 10rem;
-            transition: all 0.1s ease-in;
-            position: relative;
-            font-size: 1.6rem;
-        }
-
-        &:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-        }
-
-        &:active {
-            transform: translateY(-1px);
-            box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-        }
-
-        &::after {
-            content: '';
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-            border-radius: 10rem;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            transition: all 0.2s ease-in;
-        }
-
-        &::after {
-            background-color: $color-white;
-        }
-
-        &:hover::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
-
-        &-animated {
-            animation: moveInBtn 0.2s ease-out 0.55s;
-            animation-fill-mode: backwards;
-        }
-    }
-
 }
 
 /* Header Styles */
@@ -118,7 +68,7 @@
 // About Styles
 .about {
     background-color: $color-gray-light;
-    padding: 25rem 0;
+    padding: 25rem 0 40rem 0;
     padding-top: 32vh;
     margin-top: -20vh;
 
@@ -141,4 +91,105 @@
             filter: drop-shadow(1rem 1rem .2rem rgba($color-primary-light, 1));
         }
     }
+
+    .heading-tertiary {
+        font-size: $default-font-size;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .paragraph {
+        font-size: $default-font-size;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .composition {
+        position: relative;
+
+        &__photo {
+            width: 55%;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+            border-radius: 2px;
+            position: absolute;
+            transition: all 0.2s ease-in-out;
+            outline-offset: 1rem;
+
+            &-p1 {
+                left: 0;
+                top: -2rem;
+            }
+
+            &-p2 {
+                right: 0;
+                top: 2rem;
+            }
+
+            &-p3 {
+                left: 20%;
+                top: 10rem;
+            }
+
+            &:hover {
+                outline: .5rem solid $color-primary;
+                transform: scale(1.05) translateY(-.5rem);
+                box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+                z-index: 20;
+            }
+        }
+
+        &:hover .composition__photo:not(:hover) {
+            -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+        }
+    }
 }
+
+// About Styles
+
+// feature styles
+
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url("../img/nat-4.jpg");
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: -20rem;
+
+    &>* {
+        transform: skewY(7deg);
+    }
+
+    .feature-box {
+        background-color: rgba($color-white, .8);
+        font-size: $default-font-size;
+        padding: 2.5rem;
+        text-align: center;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+        transition: transform .3s;
+        margin: 1rem auto;
+        width: 255px;
+
+        &__icon {
+            font-size: 6rem;
+            margin-bottom: .5rem;
+            display: inline-block;
+            background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -o-background-clip: text;
+            color: transparent;
+        }
+
+        &:hover {
+            transform: translateY(-1.5rem) scale(1.03);
+        }
+    }
+}
+
+
+// feature styles
