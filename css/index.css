@@ -27,6 +27,30 @@ body {
   color: #777;
 }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.heading-secondary:hover {
+  -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+          transform: skewY(2deg) skewX(15deg) scale(1.1);
+  -webkit-filter: drop-shadow(1rem 1rem 0.2rem #7ed56f);
+          filter: drop-shadow(1rem 1rem 0.2rem #7ed56f);
+}
+
 /* Globals Styles */
 /* Keyframe animation */
 @-webkit-keyframes moveInLeft {
@@ -143,6 +167,10 @@ body {
   margin-bottom: 8rem;
 }
 
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -237,6 +265,15 @@ body {
           animation: moveInBtn 0.2s ease-out 0.55s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+}
+
+.btn-green {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+.btn-green::after {
+  background-color: #55c57a;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -336,30 +373,6 @@ body {
   padding: 25rem 0 40rem 0;
   padding-top: 32vh;
   margin-top: -20vh;
-}
-
-.about__heading {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -o-background-clip: text;
-  color: transparent;
-  letter-spacing: .2rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.about__heading:hover {
-  -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
-          transform: skewY(2deg) skewX(15deg) scale(1.1);
-  -webkit-filter: drop-shadow(1rem 1rem 0.2rem #7ed56f);
-          filter: drop-shadow(1rem 1rem 0.2rem #7ed56f);
 }
 
 .about .heading-tertiary {
@@ -467,5 +480,177 @@ body {
 .section-features .feature-box:hover {
   -webkit-transform: translateY(-1.5rem) scale(1.03);
           transform: translateY(-1.5rem) scale(1.03);
+}
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem 0;
+  margin-top: -10rem;
+}
+
+.section-tours .card {
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  min-width: 285px;
+  max-width: 350px;
+  height: 51rem;
+  min-height: 275px;
+  margin: 0 auto;
+}
+
+.section-tours .card__side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  font-size: 2rem;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.section-tours .card__side-front {
+  background-color: #fff;
+}
+
+.section-tours .card__side-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  height: 100%;
+}
+
+.section-tours .card__side-back-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.section-tours .card__side-back-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+
+.section-tours .card__side-back-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa));
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
+
+.section-tours .card:hover .card__side-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.section-tours .card:hover .card__side-back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.section-tours .card__picture {
+  background-size: cover;
+  height: 23rem;
+  background-blend-mode: screen;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.section-tours .card__picture-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485)), url("../img/nat-5.jpg");
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/nat-5.jpg");
+}
+
+.section-tours .card__picture-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730)), url("../img/nat-6.jpg");
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-6.jpg");
+}
+
+.section-tours .card__picture-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa)), url("../img/nat-7.jpg");
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/nat-7.jpg");
+}
+
+.section-tours .card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  width: 75%;
+}
+
+.section-tours .card__heading-span {
+  padding: 1rem 1.5rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.section-tours .card__heading-span--1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.85)), to(rgba(40, 180, 133, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
+}
+
+.section-tours .card__heading-span--2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.85)), to(rgba(255, 119, 48, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+
+.section-tours .card__heading-span--3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.85)), to(rgba(86, 67, 250, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
+}
+
+.section-tours .card__details {
+  padding: 3rem;
+}
+
+.section-tours .card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section-tours .card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.section-tours .card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.section-tours .card__cta {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.section-tours .card__price-box {
+  color: #fff;
+  margin-bottom: 8rem;
+}
+
+.section-tours .card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.section-tours .card__price-value {
+  font-size: 6rem;
+  font-weight: 100;
 }
 /*# sourceMappingURL=index.css.map */
