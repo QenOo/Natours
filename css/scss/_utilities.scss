@@ -11,7 +11,7 @@
 }
 
 .u-margin-bottom-big {
-    margin-bottom: 8rem;
+    margin-bottom: 8rem !important;
 }
 
 .u-margin-top-big {
@@ -24,6 +24,16 @@
     flex-wrap: wrap;
     max-width: 114rem;
     margin: 0 auto;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row:not(:last-child) {
+    margin-bottom: 8rem;
 }
 
 .col {
