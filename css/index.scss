@@ -75,6 +75,8 @@
 
     @include respond(small-phone) {
         padding: 25rem 0 70rem 0;
+        padding-top: 32vh;
+
     }
 
     .heading-tertiary {
@@ -720,6 +722,11 @@
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
         cursor: pointer;
+
+        @include respond(small-phone) {
+            height: 10rem;
+            width: 10rem;
+        }
     }
 
     &__background {
@@ -794,6 +801,10 @@
         position: relative;
         margin-top: 3.5rem;
 
+        @include respond(small-phone) {
+            margin-top: 4.5rem;
+        }
+
         &,
         &:before,
         &:after {
@@ -802,6 +813,11 @@
             height: 2px;
             background-color: $color-grey-dark;
             display: inline-block;
+
+            @include respond(small-phone) {
+                width: 6rem;
+                height: 2px
+            }
         }
 
         &:before,
@@ -814,10 +830,19 @@
 
         &:before {
             top: -.8rem;
+
+            @include respond(small-phone) {
+                top: -1rem;
+            }
+
         }
 
         &:after {
             top: .8rem;
+
+            @include respond(small-phone) {
+                top: 1rem;
+            }
         }
     }
 

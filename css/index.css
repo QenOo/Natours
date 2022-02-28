@@ -460,6 +460,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 @media (max-width: 575.98px) {
   .about {
     padding: 25rem 0 70rem 0;
+    padding-top: 32vh;
   }
 }
 
@@ -1158,6 +1159,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
   cursor: pointer;
 }
 
+@media (max-width: 575.98px) {
+  .navigation__button {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
 .navigation__background {
   height: 6rem;
   width: 6rem;
@@ -1233,12 +1241,25 @@ ORDER: Base + typography > general layout + grid > page layout > components
   margin-top: 3.5rem;
 }
 
+@media (max-width: 575.98px) {
+  .navigation__icon {
+    margin-top: 4.5rem;
+  }
+}
+
 .navigation__icon, .navigation__icon:before, .navigation__icon:after {
   content: '';
   width: 3rem;
   height: 2px;
   background-color: #333;
   display: inline-block;
+}
+
+@media (max-width: 575.98px) {
+  .navigation__icon, .navigation__icon:before, .navigation__icon:after {
+    width: 6rem;
+    height: 2px;
+  }
 }
 
 .navigation__icon:before, .navigation__icon:after {
@@ -1253,8 +1274,20 @@ ORDER: Base + typography > general layout + grid > page layout > components
   top: -.8rem;
 }
 
+@media (max-width: 575.98px) {
+  .navigation__icon:before {
+    top: -1rem;
+  }
+}
+
 .navigation__icon:after {
   top: .8rem;
+}
+
+@media (max-width: 575.98px) {
+  .navigation__icon:after {
+    top: 1rem;
+  }
 }
 
 .navigation__button:hover .navigation__icon::before {
