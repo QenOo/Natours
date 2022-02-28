@@ -23,22 +23,22 @@ ORDER: Base + typography > general layout + grid > page layout > components
 @mixin respond($breakpoint) {
 
     @if $breakpoint==small-phone {
-        @media (max-width: 576px) {
+        @media (max-width: 575.98px) {
             @content;
         }
     }
 
     @else if $breakpoint==tab-port {
-        @media only screen and (max-width: 56.25em) {
+        @media only screen and (min-width: 576px) and (max-width: 767.98px) {
             @content;
         }
     }
 
-    @else if $breakpoint==tab-land {
-        @media only screen and (max-width: 75em) {
-            @content;
-        }
-    }
+    // @else if $breakpoint==tab-land {
+    //     @media only screen and (max-width: 75em) {
+    //         @content;
+    //     }
+    // }
 
     @else if $breakpoint==big-desktop {
         @media only screen and (min-width: 112.5em) {

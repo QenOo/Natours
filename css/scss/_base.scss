@@ -17,12 +17,7 @@ html {
         font-size: 17.5%;
     }
 
-    @include respond(phone) {
-        font-size: 30.5%;
-    }
-
     @include respond(tab-port) {
-        // width < 900?
         font-size: 50%; //1 rem = 8px, 8/16 = 50%
     }
 
