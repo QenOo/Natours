@@ -560,25 +560,25 @@
                     position: relative;
                     padding-left: 5rem;
 
-                    @include respond(small-phone) {
-                        padding-left: 11rem;
-                    }
+                    // @include respond(small-phone) {
+                    //     padding-left: 11rem;
+                    // }
                 }
 
                 &__radio-button {
                     height: 3rem;
                     width: 3rem;
-                    border: 5px solid $color-primary;
+                    border: 2px solid $color-primary;
                     border-radius: 50%;
                     display: inline-block;
                     position: absolute;
                     top: -.4rem;
                     left: 0;
 
-                    @include respond(small-phone) {
-                        width: 9rem;
-                        height: 9rem;
-                    }
+                    // @include respond(small-phone) {
+                    //     width: 9rem;
+                    //     height: 9rem;
+                    // }
 
                     &::after {
                         content: '';
@@ -594,10 +594,10 @@
                         opacity: 0;
                         transition: opacity .2s;
 
-                        @include respond(small-phone) {
-                            width: 3.3rem;
-                            height: 3.3rem;
-                        }
+                        // @include respond(small-phone) {
+                        //     width: 3.3rem;
+                        //     height: 3.3rem;
+                        // }
                     }
 
                 }
