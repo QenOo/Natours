@@ -1,3 +1,5 @@
+@import "mediaQuery";
+
 /* Globals Styles */
 *,
 *:before,
@@ -8,7 +10,25 @@
 }
 
 html {
-    font-size: 62.5%;
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(small-phone) {
+        font-size: 17.5%;
+    }
+
+    @include respond(phone) {
+        font-size: 30.5%;
+    }
+
+    @include respond(tab-port) {
+        // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
 }
 
 body {
