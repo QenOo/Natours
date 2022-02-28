@@ -687,7 +687,7 @@
         display: none;
 
         &:checked~.navigation__background {
-            transform: scale(50);
+            transform: scale(100);
         }
 
         &:checked~.navigation__nav {

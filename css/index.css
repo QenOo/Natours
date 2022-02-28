@@ -1119,8 +1119,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 
 .navigation__checkbox:checked ~ .navigation__background {
-  -webkit-transform: scale(50);
-          transform: scale(50);
+  -webkit-transform: scale(100);
+          transform: scale(100);
 }
 
 .navigation__checkbox:checked ~ .navigation__nav {
