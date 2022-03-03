@@ -2,17 +2,13 @@
 
 /*
 
-0 - 600px:      Phone
-600 - 900px:    Tablet portrait
+0 - 575.98px: small - Phone
+576px - 767.98: Tablet portrait
 900 - 1200px:   Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + :      Big desktop
 
 $breakpoint argument choices:
-- phone
+- small - Phone
 - tab-port
-- tab-land
-- big-desktop
 
 ORDER: Base + typography > general layout + grid > page layout > components
 
@@ -40,11 +36,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
     //     }
     // }
 
-    @else if $breakpoint==big-desktop {
-        @media only screen and (min-width: 112.5em) {
-            @content;
-        }
-    }
+    // @else if $breakpoint==big-desktop {
+    //     @media only screen and (min-width: 112.5em) {
+    //         @content;
+    //     }
+    // }
 }
 
 
